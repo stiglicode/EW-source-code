@@ -1,0 +1,99 @@
+@import '../../../../style/var';
+
+.__exp__side-menu {
+    padding: $padd-2;
+    width: 300px;
+    min-width: 150px;
+    max-width: 400px;
+    position: relative;
+    user-select: none;
+    border-top-right-radius: $radius-20;
+    border-bottom-right-radius: $radius-20;
+    border: none;
+    .resizer {
+        position: absolute;
+        height: 100%;
+        width: 5px;
+        right: 0;
+        top: 0;
+        cursor: e-resize;
+    }
+}
+.switcher-container {
+    justify-content: space-between;
+    .switcher-box {
+        cursor: pointer;
+        transition: .3s;
+        border-width: 1.5px;
+        border-style: solid;
+        border-color: var(--contrast-hue-06-alpha);
+        transform: scale(.7);
+        a {
+            color: #fff;
+            text-decoration: none;
+            cursor: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+                cursor: inherit;
+                path {
+                    cursor: inherit;
+                }
+            }
+        }
+        padding: 8px 1.5em;
+        &:hover {
+            border-color: var(--contrast-hue-100-alpha);
+        }
+    }
+    .sw-box__ON {
+        background-color: var(--contrast-hue-100-alpha);
+        transform: scale(.8);
+        pointer-events: none;
+        a {
+            color: var(--main-hue-100-alpha);
+        }
+    }
+}
+.folder_type-container {
+    a {
+        font-size: inherit;
+        font-weight: 200;
+        margin-bottom: .4rem;
+        padding: 1px 0px;
+        transition: font-weight .0s;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::after {
+            content: '';
+            position: relative;
+            width: 0%;
+            transition: .3s;
+            height: 4px;
+            background-color: var(--contrast-hue-100-alpha);
+            right: -2rem;
+            display: flex;
+            justify-self: flex-end;
+            border-top-left-radius: 150px;
+            border-bottom-left-radius: 150px;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:hover {
+            font-weight: 300;
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+    .fldr-type__on {
+        font-weight: 500;
+        pointer-events: none;
+        &::after {
+            width: 100%;
+        }
+    }
+}

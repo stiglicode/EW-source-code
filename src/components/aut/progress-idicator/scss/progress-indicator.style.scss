@@ -1,0 +1,62 @@
+@import "../../../../style/var";
+
+.step-progress_container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    min-height: 50px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    align-items: center;
+    position: absolute;
+    top: $padd-2;
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: var(--main-hue-10-alpha);
+        width: 100%;
+        height: 13px;
+        z-index: 1;
+        left: 0;
+    }
+    .step-box {
+        display: flex;
+        position: relative;
+        flex-grow: 1;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+        margin-right: 4rem;
+        z-index: 1;
+        color: var(--main-hue-100-alpha);
+        opacity: 0.5;
+        transition: 0.3s;
+        .step-progress-title,
+        .step-progress-subtitle {
+            color: inherit;
+        }
+        .step-progress-bar {
+            display: inline-block;
+            width: 100%;
+            height: 5px;
+            border-radius: 15px * 10;
+            margin: 1rem 0;
+            background-color: var(--main-hue-100-alpha);
+            transition: 0.3s;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .step-box_ON {
+        opacity: 1;
+    }
+    .step-box_SUCCESS {
+        opacity: 1;
+        color: var(--success-hue-100-alpha);
+        .step-progress-bar {
+            background-color: var(--success-hue-100-alpha);
+        }
+    }
+}

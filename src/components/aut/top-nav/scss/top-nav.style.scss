@@ -1,0 +1,42 @@
+@import '../../../../style/var';
+.top-nav_box {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: $padd-1;
+    border-bottom-right-radius: $padd-1;
+    .top-nav_link{
+        font-size: inherit;
+        cursor: pointer;
+        color: var(--contrast-hue-100-alpha);
+        text-decoration: none;
+        opacity: 0.5;
+        transition: .3s;
+        position: relative;
+        span {
+            font-size: inherit;
+            cursor: inherit;
+        }
+        &:nth-child(2){
+           margin: 0 $padd-1;
+        }
+       
+        &:hover {
+            opacity: 1;
+            color: var(--contrast-hue-100-alpha) !important;
+        }
+        &__ON {
+            transition: .3s;
+            transform: scale(1.4) !important;
+            opacity: 1;
+            cursor: default !important;
+            &:hover {
+                color: unset !important;
+                background-color: unset !important;
+            }
+        }
+    }
+}
