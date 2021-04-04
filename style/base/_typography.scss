@@ -1,0 +1,84 @@
+@import "../assets/fonts/Roboto-family/roboto-entry";
+
+html,
+body,
+* {
+    // 100% = 1rem = 16px
+    font-size: 16px;
+    font-family: Roboto, Roboto-Regular;
+    font-style: normal;
+}
+
+.bold {
+    font-family: Roboto, Roboto-Bold;
+    font-weight: bold;
+}
+.light {
+    font-family: Roboto, Roboto-Light;
+    font-weight: 100;
+}
+.normal {
+    font-family: Roboto, Roboto-Regular;
+    font-weight: normal;
+}
+.italic {
+    font-family: Roboto, Roboto-Italic;
+    font-style: italic;
+}
+.text {
+    font-size: 1rem;
+}
+.sm-text {
+    font-size: .8em;
+}
+h1, .large-text {
+    font-size: 1rem * 2;
+    font-weight: normal;
+}
+h2,.semi_large-text {
+    font-size: 1rem * 1.8;
+    font-weight: normal;
+}
+h3, .medium-text {
+    font-size: 1rem * 1.5;
+    font-weight: normal;
+}
+h4, .semi_base-text{
+    font-size: 1rem * 1.2;
+    font-weight: normal;
+}
+h5, .base-text {
+    font-size: 1rem;
+    font-weight: normal;
+}
+.a-link {
+    color: inherit;
+    font-family: Roboto, Roboto-Regular;
+    font-weight: normal;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    color: var(--main-hue-70-alpha);
+    transition: $transition-time;
+    box-sizing: content-box;
+    &::after {
+        content: '';
+        left: 0;
+        bottom: 10px;
+        position: absolute;
+        height: 2px;
+        background-color:var(--main-hue-100-alpha);;
+        width: 100%;
+        opacity: 0;
+        transition: $transition-time;
+    }
+    &:hover {
+        color: var(--main-hue-100-alpha);
+        font-family: Roboto, Roboto-Medium;
+        font-weight: bold;
+        &::after {
+            bottom: -1px;
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.tooltip {
+    padding: $btn-padd-vertical $btn-padd-horizontal;
+    @include fit-content;
+    cursor: default;
+    position: relative;
+    display: flex;
+    &::after {
+        content: "";
+        position: absolute;
+        height: 25px;
+        width: 25px;
+    }
+    margin-bottom: 20px;
+    &-top {
+        justify-content: center;
+        &::after {
+            top: -25px;
+            clip-path: polygon(50% 64%, 0% 100%, 100% 100%);
+        }
+    }
+    &-bottom {
+        justify-content: center;
+        &::after {
+            bottom: -25px;
+            clip-path: polygon(50% 36%, 0% 0%, 100% 0%);
+        }
+    }
+    &-left {
+        display: flex;
+        align-items: center;
+        &::after {
+            left: -25px;
+            height: 15px;
+            clip-path: polygon(64% 50%, 100% 0, 100% 100%);
+        }
+    }
+    &-right {
+        display: flex;
+        align-items: center;
+        &::after {
+            right: -24.5px;
+            height: 15px;
+            clip-path: polygon(36% 50%, 0 0, 0 100%);
+        }
+    }
+}

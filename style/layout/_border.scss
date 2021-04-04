@@ -1,0 +1,25 @@
+.soft-border {
+    border-radius: $soft-radius;
+}
+.sharp-border {
+    border-radius: $sharp-radius;
+}
+.rounded-border {
+    border-radius: $rounded-radius;
+}
+
+.init-border {
+    border-width: $border-width;
+    border-style: solid;
+    padding: $btn-padd-horizontal;
+}
+.line-bottom {
+    border-bottom: solid 1px;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+.line-top {
+    border-top: solid 1px;
+    padding-top: 20px;
+    margin-top: 25px;
+}

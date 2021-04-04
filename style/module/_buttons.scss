@@ -1,0 +1,71 @@
+.btn {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    user-select: none;
+    border-width: $border-width;
+    border-style: solid;
+    padding: $btn-padding;
+    font-size: 1rem;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    &-large {
+        font-size: 1.5rem !important;
+    }
+    &-inline {
+        width: 100% !important;
+    }
+    &-half-inline {
+        width: 50% !important;
+    }
+    &-title {
+        font-family: Roboto-Regular, Roboto;
+        font-weight: 500;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+    }
+    &-primary {
+        background-color: var(--main-hue-30-alpha);
+        color: var(--main-hue-100-alpha);
+        border-color: var(--main-hue-100-alpha);
+        &:hover {
+            background-color: var(--main-hue-50-alpha);
+        }
+    }
+    &-success {
+        background-color: var(--success-hue-30-alpha);
+        color: var(--success-hue-100-alpha);
+        border-color: var(--success-hue-100-alpha);
+        &:hover {
+            background-color: var(--success-hue-50-alpha);
+        }
+    }
+    &-warning {
+        background-color: var(--warning-hue-30-alpha);
+        color: var(--warning-hue-100-alpha);
+        border-color: var(--warning-hue-100-alpha);
+        &:hover {
+            background-color: var(--warning-hue-50-alpha);
+        }
+    }
+    &-danger {
+        background-color: var(--danger-hue-30-alpha);
+        color: var(--danger-hue-100-alpha);
+        border-color: var(--danger-hue-100-alpha);
+        &:hover {
+            background-color: var(--danger-hue-50-alpha);
+        }
+    }
+    &:hover {
+        position: relative;
+    }
+    @include event-btn;
+}
+.click-eff {
+    @include event-btn;
+}

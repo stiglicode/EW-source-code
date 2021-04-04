@@ -1,0 +1,8 @@
+.module-off {
+    transition: $transition-time;
+    opacity: .5;
+}
+.module-on {
+    transition: $transition-time;
+    opacity: 1;
+}

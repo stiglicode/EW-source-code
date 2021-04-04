@@ -1,0 +1,21 @@
+@mixin event-btn {
+    cursor: pointer !important;
+    transition: $transition-time !important;
+    user-select: none !important;
+    &:active {
+        transform: scale(0.9) !important;
+    }
+}
+@mixin fit-content {
+    width: fit-content;
+    height: fit-content;
+}
+
+@mixin primary-adapt {
+    background-color: var(--main-hue-100-alpha);
+    color: var(--contrast-hue-100-alpha);
+}
+@mixin contrast-adapt {
+    background-color: var(--contrast-hue-100-alpha);
+    color: var(--main-hue-100-alpha);
+}

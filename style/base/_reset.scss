@@ -1,0 +1,113 @@
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    border: none;
+    background: none;
+}
+html,
+body,
+* {
+    cursor: default;
+    
+}
+html,
+body {
+    margin: 0;
+    padding: 15px;
+    border: 0;
+    border: none;
+    scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    display: inline;
+    margin-block-start: unset;
+    margin-block-end: unset;
+    margin-inline-start: unset;
+    margin-inline-end: unset;
+}
+.justify-right,
+.justify-end {
+    display: flex;
+    justify-content: end;
+}
+
+.justify-left,
+.justify-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.align-bottom,
+.align-end {
+    display: flex;
+    align-items: flex-end;
+}
+
+.align-top,
+.align-start {
+    display: flex;
+    align-items: flex-start;
+}
+
+.align-between {
+    display: flex;
+    align-content: space-between;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+
+/* direction */
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+button {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: unset;
+    cursor: default;
+    background: unset;
+    box-sizing: border-box;
+    margin: 0em;
+    font: unset;
+    padding: unset;
+    border: unset;
+}

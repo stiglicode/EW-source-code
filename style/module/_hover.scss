@@ -1,0 +1,20 @@
+.hover-btn-zero {
+    @include fit-content;
+    padding: $btn-padd-vertical;
+    @include event-btn;
+    min-width: 25px;
+    min-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hover-btn-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $btn-padd-vertical $btn-padd-horizontal;
+    @include event-btn;
+    @include fit-content;
+    min-width: 10px;
+    font-family: Roboto-Bold;
+}

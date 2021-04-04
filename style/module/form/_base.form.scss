@@ -1,0 +1,127 @@
+@import "./validations.form";
+
+.form-wrapper {
+    padding: $btn-padd-horizontal * 2 !important;
+    // .form-title {
+    // }
+    .form-container {
+        padding: $btn-padd-horizontal 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .form-row-1:last-child {
+            margin-bottom: 0;
+        }
+        .form-row-1 {
+            margin-bottom: 25px;
+            display: grid;
+            grid-template-columns: auto;
+            width: 100%;
+        }
+        .form-row-2 {
+            margin-bottom: 25px;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+            width: 100%;
+        }
+        .form-element {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .form-element-error {
+                position: absolute;
+                font-size: .8em;
+                right: $btn-padd-horizontal;
+                bottom: -18px;
+                transition: .3s;
+            }
+            label {
+                position: absolute;
+                left: $btn-padd-horizontal;
+                pointer-events: none;
+                transition: $transition-time;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                &::after {
+                    content: "";
+                    transition: $transition-time;
+                    position: absolute;
+                    width: 0%;
+                    height: 50%;
+                    left: 0;
+                    bottom: 1px;
+                    z-index: -1;
+                }
+            }
+            .input-form:focus ~ label {
+                left: 50%;
+                top: -7px;
+                transform: translateX(-50%);
+                font-size: 0.8em;
+                z-index: 2;
+                padding: 0 15px;
+                &::after {
+                    width: 100%;
+                }
+            }
+            .input-form:valid + label {
+                left: 50%;
+                top: -7px;
+                transform: translateX(-50%);
+                font-size: 0.8em;
+                z-index: 2;
+                padding: 0 15px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 50%;
+                    left: 0;
+                    bottom: 0;
+                    z-index: -1;
+                }
+            }
+            .input-form:valid {
+                border-width: $border-width !important;
+                border-style: solid;
+            }
+            .input-form {
+                border-width: $border-width;
+                border-style: solid;
+                cursor: text;
+                width: 100%;
+                // box-sizing: border-box;
+                transition: $transition-time;
+                &:focus {
+                    border-width: $border-width !important;
+                    border-style: solid;
+                }
+            }
+            .input-number {
+                text-align: center;
+                font-size: 2rem;
+                width: 20px;
+                padding: 25px 15px;
+                &::placeholder {
+                    color: var(--main-hue-30-alpha);
+                }
+                &:invalid {
+                    background-color: var(--warning-hue-10-alpha);
+                    border-color: var(--warning-hue-10-alpha);
+                    color: var(--warning-hue-100-alpha);
+                }
+            }
+        }
+        .form-buttons {
+            width: 100%;
+            .form-buttons-other {
+                margin-bottom: 25px;
+            width: 100%;
+            }
+        }
+    }
+}

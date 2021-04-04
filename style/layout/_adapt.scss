@@ -1,0 +1,52 @@
+.primary-adapt,
+.contrast-adapt {
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.primary-adapt {
+    @include primary-adapt;
+    .hover-btn-one {
+        &:hover {
+            color: var(--main-hue-100-alpha) !important;
+            background-color: var(--contrast-hue-30-alpha) !important;
+        }
+
+    }
+    .hover-btn-zero {
+        &:hover {
+            background-color: var(--contrast-hue-10-alpha);
+        }
+    }
+    .tooltip {
+        background-color: var(--contrast-hue-30-alpha);
+        &::after {
+            background-color: var(--contrast-hue-30-alpha);
+        }
+    }
+}
+
+.contrast-adapt {
+    @include contrast-adapt;
+    .hover-btn-one {
+        &:hover {
+            color: var(--contrast-hue-100-alpha) !important;
+            background-color: var(--main-hue-30-alpha) !important;
+        }
+
+    }
+    .hover-btn-zero {
+        &:hover {
+            background-color: var(--main-hue-10-alpha);
+        }
+    }
+    .tooltip {
+        background-color: var(--main-hue-30-alpha);
+        &::after {
+            background-color: var(--main-hue-30-alpha);
+        }
+    }
+}
+.w-100 {
+    width: 100%;
+}
