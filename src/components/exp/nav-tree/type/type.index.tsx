@@ -13,12 +13,12 @@ const FileTree: React.FC = () => {
 		interface BigObject<T> {
 			[index: string]: T
 		}
-		const bigObject: BigObject<any> = __TYPE_FOLDER__;
+		const bigObject: BigObject<React.RefObject<HTMLAnchorElement>> = __TYPE_FOLDER__;
 		Object.keys(bigObject).forEach(key => {
-			const currentEle = bigObject[key].current.classList;
-			currentEle.forEach((el:any):void => {
+			const currentEle = bigObject[key]?.current?.classList;
+			currentEle?.forEach((el:JSX.Element | string):void => {
 				if (el === nameOfClass) {
-					return currentEle.remove(nameOfClass);
+					return currentEle?.remove(nameOfClass);
 				}
 			});
 			if(!e.currentTarget.classList.contains(nameOfClass)){

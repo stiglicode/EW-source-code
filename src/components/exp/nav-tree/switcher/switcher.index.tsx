@@ -14,14 +14,14 @@ const ExpoSwitcher: React.FC<{userToken: string}> = (props: {userToken: string})
 			[index: string]: T
 		}
 		
-		const bigObject: BigObject<any> = boxType;
+		const bigObject: BigObject<React.RefObject<HTMLDivElement>> = boxType;
 		Object.keys(bigObject).forEach(key => {
-			const currentEle = bigObject[key].current.classList;
-			currentEle.forEach((el: any) => {
+			const currentEle = bigObject[key]?.current?.classList;
+			currentEle?.forEach((el: JSX.Element | string) => {
 				if (el === nameOfClass) {
-					currentEle.remove(nameOfClass);
+					currentEle?.remove(nameOfClass);
 				} else if (el !== nameOfClass) {
-					currentEle.add(nameOfClass);
+					currentEle?.add(nameOfClass);
 				}
 			});
 		});

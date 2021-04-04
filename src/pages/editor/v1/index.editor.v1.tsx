@@ -8,7 +8,7 @@ const Editor: React.FC = () => {
 	);
 };
 const EditorV1: {
-    UI: React.FC<any>,
+    UI: React.FC,
     gen: number
 } = {
 	UI: Editor,

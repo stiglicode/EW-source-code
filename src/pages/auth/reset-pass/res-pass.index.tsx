@@ -6,14 +6,14 @@ import StepProgress from "../../../components/aut/progress-idicator/step-progres
 import TopNav from "../../../components/aut/top-nav/top-nav.index";
 import Footer from "../../../components/aut/footer/footer.index";
 // interface
-import { FormVal } from "../../../bin/interface/form/values.interface";
+// import { FormVal } from "../../../bin/interface/form/values.interface";
 import { Link } from "react-router-dom";
 import { ProgressCallBack } from "../../../bin/interface/step-progress.interface";
 
 const EmailAuthentication: React.FC<ProgressCallBack> = (props: ProgressCallBack) => {
 	// event handler
-	const formSubmitHandler = (v: FormVal) => {
-		console.log(JSON.stringify(v, null, 2));
+	// v as value in argument with type: FormVal
+	const formSubmitHandler = () => {
 		return props.progress([2,1,0]);
 	};
 	// redner
@@ -44,9 +44,7 @@ const EmailAuthentication: React.FC<ProgressCallBack> = (props: ProgressCallBack
 	);
 };
 const CodeVerification: React.FC<ProgressCallBack> = (props: ProgressCallBack) => {
-	const formSubmitHandler = (v: FormVal) => {
-		const code = Object.values(v);
-		console.log(code);
+	const formSubmitHandler = () => {
 		return props.progress([2,2,1]);
 	};
 	const codeValid = Yup.number()
@@ -97,8 +95,7 @@ const CodeVerification: React.FC<ProgressCallBack> = (props: ProgressCallBack) =
 	);
 };
 const NewPassword: React.FC<ProgressCallBack> = (props: ProgressCallBack) => {
-	const formSubmitHandler = (v: FormVal) => {
-		console.log(JSON.stringify(v, null, 2));
+	const formSubmitHandler = () => {
 		return props.progress([2,2,2]);
 	};
 	return (

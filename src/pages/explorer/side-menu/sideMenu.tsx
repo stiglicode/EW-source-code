@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // componets 
-import { ExpoSwitcher, FolderType, FileTree } from "../../../components/exp/nav-tree/";
+import { ExpoSwitcher, FolderType} from "../../../components/exp/nav-tree/";
 // style
 import "./css/sideMenu.style.css";
 // interface

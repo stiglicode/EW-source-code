@@ -17,7 +17,7 @@ import {AuthContainer} from "./pages/auth/bin/Auth.index";
 // eslint-disable-next-line
 let logIn:boolean = true;
 
-const App: React.FC = (props) => {
+const App: React.FC = () => {
 	const authTokenChecker = (auth: JSX.Element, base: JSX.Element):JSX.Element => {
 		if(!logIn){
 			return auth;
@@ -46,7 +46,7 @@ const App: React.FC = (props) => {
 					<Route path="/">
 						{authTokenChecker(<Redirect to="/signin" />, <ExplorerUI />)}
 					</Route>
-					{/* <EditorGenerationRoute /> */}
+					<EditorGenerationRoute />
 				</Switch>
 			</Router>
 		</div>

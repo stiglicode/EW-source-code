@@ -11,7 +11,7 @@ const StepProgress: React.FC<StepProgressType> = (props: StepProgressType):JSX.E
 		return setPhase(props.progress);
 	});
 	// functions
-	const phaseDetector = (array: number[], index: number): any => {
+	const phaseDetector = (array: number[], index: number): void | string => {
 		const classSetter = (id: number): string | void => {
 			if(id === 0) {
 				return "";
