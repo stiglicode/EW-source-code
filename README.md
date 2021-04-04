@@ -1,6 +1,6 @@
 # **Extended-writing** *( Alhpa name )*
 
-- **Software is in development phase, so any description are unavailable**.
+- **Software is in development phase. Description is unavailable, yet**.
 
 - Current version `v. 0.0.1`
 
